@@ -39,7 +39,7 @@ SOFTWARE.
  */
 template<size_t NodeSize, typename K = int64_t>
 class CSSTree {
-    static_assert(NodeSize >= sizeof(K));
+    static_assert(NodeSize >= sizeof(K), "");
 
     size_t tree_height;
     size_t half_marker;
@@ -169,4 +169,5 @@ public:
     size_t size() const {
         return leaves.size();
     }
+
 };
